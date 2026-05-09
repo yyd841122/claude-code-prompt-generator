@@ -106,7 +106,7 @@ v0.1.0
 
 ## Project Status
 
-Stable MVP. UI polish applied in v0.1.1.
+Stable MVP. UI polish applied in v0.1.1. Includes an additional refined developer-tool UI pass inspired by production-grade frontend design principles, without changing core functionality.
 
 The project is online and deployed through Cloudflare Pages.
 
