@@ -61,6 +61,16 @@ start index.html
 
 项目通过 GitHub 连接 Cloudflare Pages 自动部署。推送 `main` 分支即可触发自动构建和部署。
 
+## Prompt Examples
+
+当前支持 3 个内置示例：
+
+- **Build a login page / 创建登录页** — 让 Developer Agent 创建一个基础登录页面
+- **Fix a UI bug / 修复界面 Bug** — 让 Developer Agent 只修复指定界面问题
+- **Review a feature as Tester Agent / Tester Agent 验收功能** — 让 Tester Agent 独立验收功能
+
+点击示例按钮后，会自动填充表单。用户可以再点击 Generate Prompt 生成结构化提示词。
+
 ## 后续规划
 
 - 增加更多 Prompt 模板
