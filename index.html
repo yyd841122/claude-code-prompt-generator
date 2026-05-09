@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code Prompt Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Claude Code Prompt Generator</h1>
+    <p>输入开发任务信息，自动生成适合 Claude Code 执行的结构化提示词。</p>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <form id="prompt-form">
+        <div class="field">
+          <label for="task-title">Task Title</label>
+          <input type="text" id="task-title" placeholder="例如：实现用户登录功能">
+        </div>
+
+        <div class="field">
+          <label for="agent-role">Agent Role</label>
+          <input type="text" id="agent-role" placeholder="例如：Senior Full-Stack Developer">
+        </div>
+
+        <div class="field">
+          <label for="project-background">Project Background</label>
+          <textarea id="project-background" rows="3" placeholder="项目基本情况"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="current-status">Current Status</label>
+          <textarea id="current-status" rows="3" placeholder="当前已完成的工作"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="goal">Goal</label>
+          <textarea id="goal" rows="3" placeholder="本次目标"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="steps">Steps</label>
+          <textarea id="steps" rows="4" placeholder="执行步骤，每行一个步骤"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="output-format">Output Format</label>
+          <textarea id="output-format" rows="2" placeholder="例如：返回可直接运行的代码和说明"></textarea>
+        </div>
+
+        <div class="field">
+          <label for="constraints">Constraints</label>
+          <textarea id="constraints" rows="2" placeholder="限制条件"></textarea>
+        </div>
+
+        <div class="field field-row">
+          <div>
+            <label for="need-git">Need Git Commit?</label>
+            <select id="need-git">
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+          </div>
+          <div>
+            <label for="need-test">Need Test Report?</label>
+            <select id="need-test">
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="btn-generate" class="btn btn-primary">Generate Prompt</button>
+          <button type="button" id="btn-copy" class="btn btn-secondary">Copy Prompt</button>
+          <button type="button" id="btn-clear" class="btn btn-danger">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="output-section">
+      <div class="output-header">
+        <h2>Generated Prompt</h2>
+        <span class="output-count" id="char-count">0 chars</span>
+      </div>
+      <textarea id="output" readonly placeholder="点击 Generate Prompt 生成提示词..."></textarea>
+      <div id="copy-toast" class="toast hidden">已复制到剪贴板</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
