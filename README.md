@@ -100,6 +100,21 @@ Users can submit feedback through GitHub Issues:
 
 https://github.com/yyd841122/claude-code-prompt-generator/issues
 
+## Current Version
+
+v0.1.0
+
+## Project Status
+
+Stable MVP.
+
+The project is online and deployed through Cloudflare Pages.
+
+## Summary
+
+See:
+docs/v0.1.0-summary.md
+
 ## Privacy Note
 
 - This is a static frontend tool.
