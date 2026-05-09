@@ -99,3 +99,10 @@ v0.1.0
 Users can submit feedback through GitHub Issues:
 
 https://github.com/yyd841122/claude-code-prompt-generator/issues
+
+## Privacy Note
+
+- This is a static frontend tool.
+- Inputs are processed in the browser.
+- The current version does not use login, database, payment, or AI API.
+- Generated prompts can be copied or downloaded by the user.
