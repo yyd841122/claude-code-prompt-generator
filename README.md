@@ -87,3 +87,15 @@ start index.html
 - 增加多语言支持
 - 增加使用示例
 - 后续可能接入 AI API
+
+## Version
+
+Current version:
+
+v0.1.0
+
+## Feedback
+
+Users can submit feedback through GitHub Issues:
+
+https://github.com/yyd841122/claude-code-prompt-generator/issues
