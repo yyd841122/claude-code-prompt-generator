@@ -6,6 +6,7 @@ const btnCopy = document.getElementById('btn-copy');
 const btnDownload = document.getElementById('btn-download');
 const btnClear = document.getElementById('btn-clear');
 const toast = document.getElementById('copy-toast');
+const hint = document.getElementById('download-hint');
 
 function getVal(id) {
   return document.getElementById(id).value.trim();
@@ -69,6 +70,7 @@ function generatePrompt() {
 
   output.value = parts.join('\n');
   updateCharCount();
+  hint.classList.add('hidden');
 }
 
 function updateCharCount() {
@@ -91,14 +93,13 @@ function copyPrompt() {
 function downloadMarkdown() {
   const content = output.value;
   if (!content) {
-    toast.textContent = '请先生成提示词。';
-    toast.classList.remove('hidden');
-    setTimeout(() => {
-      toast.classList.add('hidden');
-      toast.textContent = 'Copied!';
-    }, 2000);
+    hint.textContent = '请先生成提示词，再下载 Markdown 文件。Please generate a prompt before downloading Markdown.';
+    hint.classList.remove('hidden');
+    output.closest('.output-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
+
+  hint.classList.add('hidden');
 
   let filename = getValOrDefault('task-title', 'claude-code-prompt');
   filename = filename.replace(/[\\/:*?"<>|]/g, '').trim();
@@ -112,6 +113,13 @@ function downloadMarkdown() {
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
+
+  toast.textContent = 'Markdown download started.';
+  toast.classList.remove('hidden');
+  setTimeout(() => {
+    toast.classList.add('hidden');
+    toast.textContent = '已复制到剪贴板';
+  }, 2000);
 }
 
 function clearAll() {
@@ -120,6 +128,7 @@ function clearAll() {
   document.getElementById('need-test').value = 'no';
   output.value = '';
   updateCharCount();
+  hint.classList.add('hidden');
 }
 
 const EXAMPLES = {
