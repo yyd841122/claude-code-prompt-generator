@@ -39,9 +39,70 @@ header h1 {
   margin-bottom: 6px;
 }
 
-header p {
+header .subtitle {
   color: var(--text-secondary);
-  font-size: 15px;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+header .value-prop {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+header .desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.info-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 28px;
+}
+
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.info-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-card ul,
+.info-card ol {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.info-card li {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.hint {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
 main {
@@ -204,6 +265,11 @@ textarea {
 @media (max-width: 768px) {
   header {
     padding: 24px 16px 16px;
+  }
+
+  .info-panel {
+    grid-template-columns: 1fr;
+    padding: 0 16px 20px;
   }
 
   main {

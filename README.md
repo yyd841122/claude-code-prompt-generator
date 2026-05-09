@@ -4,7 +4,16 @@
 
 ## 项目简介
 
-这是一个纯前端静态工具站，用于生成适合 Claude Code 和 AI 编程 Agent 使用的结构化 Markdown 提示词。
+Claude Code Prompt Generator is a lightweight static tool for creating structured prompts for Claude Code and AI coding agents.
+
+## Language Strategy
+
+- The product name and SEO metadata are kept in English.
+- The homepage uses bilingual copy to support both search visibility and Chinese-speaking users.
+
+## Product Positioning
+
+Claude Code Prompt Generator is a lightweight static tool for creating structured prompts for Claude Code and AI coding agents. No installation, no backend, no AI API key required.
 
 ## 当前功能
 
@@ -15,6 +24,20 @@
 - 支持一键复制
 - 支持清空表单
 - 支持默认内容兜底
+
+## Target Users
+
+- Developers
+- Solo founders
+- AI coding learners
+- Multi-agent workflow builders
+
+## Use Cases
+
+- Generate developer task prompts
+- Generate tester/reviewer prompts
+- Define Git and testing requirements
+- Create reusable prompt templates for AI coding workflows
 
 ## 技术栈
 
