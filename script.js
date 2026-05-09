@@ -3,6 +3,7 @@ const output = document.getElementById('output');
 const charCount = document.getElementById('char-count');
 const btnGenerate = document.getElementById('btn-generate');
 const btnCopy = document.getElementById('btn-copy');
+const btnDownload = document.getElementById('btn-download');
 const btnClear = document.getElementById('btn-clear');
 const toast = document.getElementById('copy-toast');
 
@@ -85,6 +86,32 @@ function copyPrompt() {
     toast.classList.remove('hidden');
     setTimeout(() => toast.classList.add('hidden'), 2000);
   });
+}
+
+function downloadMarkdown() {
+  const content = output.value;
+  if (!content) {
+    toast.textContent = '请先生成提示词。';
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.textContent = 'Copied!';
+    }, 2000);
+    return;
+  }
+
+  let filename = getValOrDefault('task-title', 'claude-code-prompt');
+  filename = filename.replace(/[\\/:*?"<>|]/g, '').trim();
+  if (!filename) filename = 'claude-code-prompt';
+  if (!filename.endsWith('.md')) filename += '.md';
+
+  const blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
 }
 
 function clearAll() {
@@ -170,4 +197,5 @@ document.querySelectorAll('.btn-example').forEach(btn => {
 
 btnGenerate.addEventListener('click', generatePrompt);
 btnCopy.addEventListener('click', copyPrompt);
+btnDownload.addEventListener('click', downloadMarkdown);
 btnClear.addEventListener('click', clearAll);

@@ -22,6 +22,7 @@ Claude Code Prompt Generator is a lightweight static tool for creating structure
 - 支持 Git 提交要求
 - 支持测试报告要求
 - 支持一键复制
+- 支持导出 Markdown 文件
 - 支持清空表单
 - 支持默认内容兜底
 
@@ -71,10 +72,18 @@ start index.html
 
 点击示例按钮后，会自动填充表单。用户可以再点击 Generate Prompt 生成结构化提示词。
 
+## Export Markdown
+
+用户生成提示词后，可以点击 **Download .md** 按钮：
+
+- 将当前 Generated Prompt 区域的内容导出为 `.md` 文件
+- 文件名优先使用 Task Title（自动去除 Windows 非法字符）
+- 如果 Task Title 为空，默认文件名：`claude-code-prompt.md`
+- 如果未生成内容就点击按钮，会提示先点击 Generate Prompt
+
 ## 后续规划
 
 - 增加更多 Prompt 模板
 - 增加多语言支持
-- 增加导出 Markdown 功能
 - 增加使用示例
 - 后续可能接入 AI API

@@ -305,6 +305,18 @@ textarea {
   color: #fff;
 }
 
+.btn-download {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-download:hover {
+  background: #e8f4fd;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
 .output-header {
   display: flex;
   justify-content: space-between;
