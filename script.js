@@ -208,3 +208,7 @@ btnGenerate.addEventListener('click', generatePrompt);
 btnCopy.addEventListener('click', copyPrompt);
 btnDownload.addEventListener('click', downloadMarkdown);
 btnClear.addEventListener('click', clearAll);
+
+document.getElementById('btn-start').addEventListener('click', () => {
+  document.getElementById('form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
