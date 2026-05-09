@@ -587,14 +587,16 @@ textarea {
   }
 
   .actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
   }
 
   .actions .btn {
-    flex: 1;
-    min-width: 0;
+    width: 100%;
     text-align: center;
-    padding: 9px 12px;
+    padding: 10px 8px;
     font-size: 13px;
+    white-space: nowrap;
   }
 }
