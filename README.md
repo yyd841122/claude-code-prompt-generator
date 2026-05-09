@@ -106,7 +106,7 @@ v0.1.0
 
 ## Project Status
 
-Stable MVP.
+Stable MVP. UI polish applied in v0.1.1.
 
 The project is online and deployed through Cloudflare Pages.
 
@@ -114,6 +114,12 @@ The project is online and deployed through Cloudflare Pages.
 
 See:
 docs/v0.1.0-summary.md
+
+## UI Polish
+
+v0.1.1 focuses on visual polish for the static MVP. It improves the hero section, card layout, form readability, output area, buttons, footer, privacy note, and mobile spacing.
+
+No core prompt generation logic was changed.
 
 ## Privacy Note
 
